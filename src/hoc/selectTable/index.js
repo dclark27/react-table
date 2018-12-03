@@ -27,12 +27,12 @@ export default Component => {
     rowSelector(row) {
       if (!row || !row.hasOwnProperty(this.props.keyField)) return null
       const { toggleSelection, selectType, keyField } = this.props
-      const checked = this.props.isSelected(row[this.props.keyField])
+      const checked = this.props.isSelected(row[keyField])
       const inputProps = {
         checked,
         onClick: toggleSelection,
         selectType,
-        id: `select-id-${row[keyField]}`,
+        id: row[keyField],
         row,
       }
       return React.createElement(this.props.SelectInputComponent, inputProps)
