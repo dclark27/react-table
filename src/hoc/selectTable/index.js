@@ -7,6 +7,7 @@ const defaultSelectInputComponent = props => {
     <input
       type={props.selectType || 'checkbox'}
       checked={props.checked}
+      id={props.id}
       onClick={e => {
         const { shiftKey } = e
         e.stopPropagation()
@@ -31,7 +32,7 @@ export default Component => {
         checked,
         onClick: toggleSelection,
         selectType,
-        id: row[keyField],
+        id: `select-id-${row[keyField]}`,
         row,
       }
       return React.createElement(this.props.SelectInputComponent, inputProps)
@@ -46,6 +47,7 @@ export default Component => {
         checked,
         onClick: toggleAll,
         selectType,
+        id: 'select-all'
       }
 
       return React.createElement(SelectAllInputComponent, inputProps)

@@ -1,6 +1,6 @@
 {
-  "name": "react-table",
-  "version": "6.8.6",
+  "name": "react-table-with-ids",
+  "version": "1.0.1",
   "description": "A fast, lightweight, opinionated table and datagrid built on React",
   "license": "MIT",
   "homepage": "https://github.com/react-tools/react-table#readme",
